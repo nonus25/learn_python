@@ -1,0 +1,14 @@
+## Python Object and Data Structure Basics
+### Basic Data Types
+| Name            | Type   | Desc                  |
+| :-------------: |:------:| :---------------------|
+| Integres        | int    | ` 2 33 400 ...        ` |
+| Floating Point  | float  | ` 2.3 4.5 100.0 ...   ` |
+| String          | str    | ` "bla" '2' ...       ` |
+| Lists           | list   | **Ordered** seq of objects: ` [10,"hello",20.1] ` |
+| Dictionares     | dict   | **Unordered** _key:value_ pairs: ` {"key":"value", ...} ` |
+| Tuples          | tup    | *Ordered* **Immutable** seq of objects: ` (10,"hello",20.1) ` |
+| Sets            | set    | *Unordered* seq of **unique** objects: ` {"a","b"} ` |
+| Booleans        | bool   | ` True ` or ` False ` |
+
+Note: **Immutable** means that you cannot change the object

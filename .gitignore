@@ -1,0 +1,6 @@
+### ignore git repo for python learning 
+learnPython/Complete-Python=*
+### ignore file
+ignore_notes
+### ignore files starting with prefix __ and ending with ~
+__*~

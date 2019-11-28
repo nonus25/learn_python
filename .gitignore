@@ -4,3 +4,8 @@ learnPython/Complete-Python-*/
 ignore_notes
 ### ignore files starting with prefix __ and ending with ~
 __*~
+### ignore hidden files or directories 
+.*
+.*/
+*/.*
+*/.*/

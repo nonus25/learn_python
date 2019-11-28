@@ -1,0 +1,101 @@
+### creating new branch and switching to it 
+    
+    git checkout -b workspace
+    Switched to a new branch 'workspace'
+
+### pushing branch to remote repo
+
+    git push --set-upstream origin workspace
+    Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (2/2), done.
+    Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    To github.com:nonus25/learn_python.git
+    e44cc98..c63c56b  workspace -> workspace
+    Branch 'workspace' set up to track remote branch 'workspace' from 'origin'.
+
+### check ignore syntax
+##### files
+
+    git check-ignore -v *
+    .gitignore:6:__*~	__test1~
+    .gitignore:4:ignore_notes	ignore_notes
+
+###### folders 
+    
+    git check-ignore -v learnPython/*
+    .gitignore:2:learnPython/Complete-Python-*/	learnPython/Complete-Python-3-Bootcamp/
+    .gitignore:2:learnPython/Complete-Python-*/	learnPython/Complete-Python-Bootcamp/
+    
+### create local branch to work with it
+
+    git checkout -b local
+    Switched to a new branch 'local'
+    
+### add change to local branch
+
+    vim local_test
+    
+### check status if file there
+    
+    git status
+    On branch local
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+
+        local_test
+
+    nothing added to commit but untracked files present (use "git add" to track)
+
+### adding the file/change
+
+    git add local_test
+
+### commit local change (Note: no needs to push as u on local repo)
+    
+    git commit -m "test: local change only"
+    [local ab13ba7] test: local change only
+     1 file changed, 1 insertion(+)
+     create mode 100644 local_test
+
+    git status
+    On branch local
+    nothing to commit, working tree clean
+
+### preparing for merge
+    
+    git checkout workspace
+    Switched to branch 'workspace'
+    Your branch is up to date with 'origin/workspace'.
+    
+    
+    git merge local
+    Updating 83fa969..ab13ba7
+    Fast-forward
+     local_test | 1 +
+     1 file changed, 1 insertion(+)
+     create mode 100644 local_test
+
+    git status
+    On branch workspace
+    Your branch is ahead of 'origin/workspace' by 1 commit.
+      (use "git push" to publish your local commits)
+
+    nothing to commit, working tree clean
+
+    git push
+    Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (2/2), done.
+    Writing objects: 100% (3/3), 291 bytes | 291.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    To github.com:nonus25/learn_python.git
+       83fa969..ab13ba7  workspace -> workspace
+       
